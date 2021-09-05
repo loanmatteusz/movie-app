@@ -1,0 +1,86 @@
+.titles {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  color: white;
+}
+
+.titles > h2 {
+  margin-right: 2rem;
+}
+
+.notFound {
+  color: white;
+  text-align: center;
+}
+
+.movie-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-area {
+  width: 100%;
+}
+
+header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #2b2e52;
+  padding: .1rem;
+  padding-top: 15rem;
+  object-fit: cover;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid #3a3c65;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  color: white;
+
+  padding: .5rem 1.5rem;
+}
+
+.search:focus {
+  outline: none;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .input-area {
+    width: 90%;
+  }
+  input {
+    width: 100%;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    object-fit: cover;
+  }
+
+  .pagination {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .movie-content {
+    max-width: 100%;
+  }
+}
+
