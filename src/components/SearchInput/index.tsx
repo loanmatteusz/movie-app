@@ -9,7 +9,7 @@ type Props = {
 
 function SearchInput({ value, onChange }: Props) {
   const [displayValue, setDisplayValue] = useState(value);
-  const debounceChange = useDebounce(onChange, 1500);
+  const debounceChange = useDebounce(onChange, 1000);
 
   function handleChange(event: any) {
     setDisplayValue(event.target.value);
