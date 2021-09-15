@@ -1,5 +1,4 @@
 import { observer, useLocalObservable } from 'mobx-react-lite';
-import { useEffect } from 'react';
 
 import Store from './mobx/store';
 
@@ -9,11 +8,7 @@ import SearchInput from './components/SearchInput';
 import Pagination from './components/Pagination';
 
 function App() {
-
   const store = useLocalObservable(() => new Store());
-  useEffect(() => {
-    store.fetch();
-  }, [store]);
 
   return (
     <>

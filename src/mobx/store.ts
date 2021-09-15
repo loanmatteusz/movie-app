@@ -1,10 +1,13 @@
-import { makeAutoObservable, runInAction } from 'mobx';
+import { autorun, makeAutoObservable, runInAction } from 'mobx';
 import { IData } from '../types';
 import api from './API';
 
 class Store {
   constructor() {
     makeAutoObservable(this);
+    autorun(() => {
+      this.fetch(this.search, this.page);
+    });
   }
 
   public data: IData;
