@@ -6,18 +6,40 @@ import './App.css';
 import Movie from './components/Movie';
 import SearchInput from './components/SearchInput';
 import Pagination from './components/Pagination';
+import { useEffect } from 'react';
 
 function App() {
   const store = useLocalObservable(() => new Store());
+
+  useEffect(() => {
+    return store.disposer();
+  }, [store]);
 
   return (
     <>
       <header>
 
-        <div className="titles">
-          <h2>
-            Popularity
-          </h2>
+        <div className="lateral-content">
+          <div className="title">
+            <h2>
+              Most Searched
+            </h2>
+          </div>
+          <div className="most-wanted">
+            {
+              store.mostWantedOrderned && store.mostWantedOrderned.length !== 0
+                ? store.mostWantedOrderned.map(item => {
+                  return (
+                    <p
+                      key={item.name}
+                    >
+                      {item.name} : {item.quantity}
+                    </p>
+                  )
+                })
+                : ""
+            }
+          </div>
         </div>
 
         <div className="input-area">
