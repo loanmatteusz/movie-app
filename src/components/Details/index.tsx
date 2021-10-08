@@ -9,6 +9,7 @@ type Props = {
   overview: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function Details({
   title,
   poster_path,

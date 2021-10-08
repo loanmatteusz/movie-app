@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { IReactionDisposer, makeAutoObservable, reaction, runInAction } from 'mobx';
 import { IData } from '../types';
 import api from './API';
@@ -9,7 +10,9 @@ interface IMostWanted {
 
 class Store {
   public data: IData;
+  // eslint-disable-next-line @typescript-eslint/no-inferrable-types
   public page: number = 1;
+  // eslint-disable-next-line @typescript-eslint/no-inferrable-types
   public search: string = "";
   public mostWanted: IMostWanted[] = [];
 
@@ -22,6 +25,7 @@ class Store {
     this.searchDisposer = reaction(() => this.search, () => this.fetch(this.search, this.page));
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   public addMostWanted(search: string) {
     const itemExists = this.mostWanted.find(item => item.name === search);
     if (itemExists) {

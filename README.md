@@ -10,8 +10,16 @@ Implementar funcionalidade de busca de filmes, com paginação.
 
 ### Se conseguir, extenda o projeto
 - [x] Adicionar paginação à lista de objetos.
-- [] Adicionar uma rota de página específica do objeto, acessada a partir do clique no card do objeto.
-- [] Adicionar um campo de busca à lista de objetos.
+- [.] Adicionar uma rota de página específica do objeto, acessada a partir do clique no card do objeto.
+- [.] Adicionar um campo de busca à lista de objetos.
+
+### Desafio de integração com Mobx
+- [x] App somente para configuração;
+- [.]  Store local somente vão ser iniciadas nos componentes tela;
+- [x] Componentes não recebem store como props;
+- [x] Todo atomo é um componente do chakra;
+- [.]  Se você estiver passando muita props de estilização, (max 3), voce tem que criar um componente novo;
+- [.]  Breakpoints só podem ser usados como objeto.
 
 ---
 
