@@ -9,32 +9,66 @@ const theme = extendTheme({
         bgColor: "#202035"
       },
     },
-    chakraStyle: {
-      "HomeHStack": {
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr",
-        bgColor: "#2b2e52",
-        p: ".5rem",
-        pt: "12rem",
-      },
-      // "TextMostSearch": {
-      //   isplay: "flex",
-      //   flexDirection: "row",
-      //   alignItems: "baseline",
-      //   justifyContent: "center",
-      //   color: "#ffffff",
-      //   marginBottom: "-30px",
-      // },
-      // "MoviesContainer": {
-      //   display: "flex",
-      //   flexWrap: "wrap",
-      //   justifyContent: "center",
-      //   maxW: "90%",
-      //   ml: "auto",
-      //   mr: "auto",
-      // }
-    }
   },
+  components: {
+    Container: {
+      variants: {
+        "headComponents": {
+          maxWidth: "100%",
+          display: "grid",
+          alignItems: "center",
+          justifyContent: "center",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          backgroundColor: "#2b2e52",
+          padding: "1rem",
+          paddingTop: "14rem",
+          objectFit: "cover",
+        },
+        "movies": {
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          maxWidth: "90%",
+          marginLeft: "auto",
+          marginRight: "auto",
+        },
+        "lateralContainer": {
+          margin: "auto",
+          display: "flex",
+          flexDirection: "column-reverse",
+          justifyContent: "space-between",
+          pb: "25px"
+        },
+        "mostSearchRanking": {
+          marginTop: "-12rem",
+          color: "white",
+          textAlign: "center",
+          backgroundColor: "#3a3c65",
+          borderRadius: "10px",
+        }
+      },
+    },
+    Text: {
+      variants: {
+        "lateralTitle": {
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "baseline",
+          justifyContent: "center",
+          color: "#ffffff",
+          marginBottom: "-30px",
+        },
+      },
+    },
+  },
+  textStyles: {
+    h2: {
+      fontSize: ["16px", "28px"],
+      fontWeight: "semibold",
+      lineHeight: "110%",
+      letterSpacing: "-1%",
+    },
+  }
 });
 
 export default theme;

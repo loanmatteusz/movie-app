@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect } from 'react';
-import { Box, HStack, Container, Text } from '@chakra-ui/react'
+import { Container, Text } from '@chakra-ui/react'
 import { observer, useLocalObservable } from 'mobx-react-lite';
 
 import SearchInput from '../../components/SearchInput';
@@ -28,36 +28,21 @@ function Home() {
 
   return (
     <>
-      <HStack
-        display="grid"
-        gridTemplateColumns="1fr 1fr 1fr"
-        bgColor="#2b2e52"
-        padding=".5rem"
-        paddingTop="12rem"
+      <Container
+        variant="headComponents"
       >
         <Container
-          margin="auto"
-          display="flex"
-          flexDirection="column-reverse"
-          justifyContent="space-between"
+          variant="lateralContainer"
         >
           <Text
-            display="flex"
-            flexDirection="row"
-            alignItems="baseline"
-            justifyContent="center"
-            color="#ffffff"
-            marginBottom="-30px"
+            textStyle="h2"
+            variant="lateralTitle"
           >
-            <h2>Most Searched</h2>
+            Most Searched
           </Text>
 
-          <Box
-            marginTop="-12rem"
-            color="white"
-            textAlign="center"
-            backgroundColor="#3a3c65"
-            borderRadius="10px"
+          <Container
+            variant="mostSearchRanking"
           >
             {
               mostWantedOrderned && mostWantedOrderned.length !== 0
@@ -72,7 +57,7 @@ function Home() {
                 })
                 : ""
             }
-          </Box>
+          </Container>
 
         </Container>
 
@@ -83,7 +68,7 @@ function Home() {
           />
         </Container>
 
-        <Container className="pagination">
+        <Container>
           {data && data.total_results > 20 ?
             <Pagination
               search={search}
@@ -94,15 +79,10 @@ function Home() {
           }
         </Container>
 
-      </HStack>
+      </Container>
 
       <Container
-        display="flex"
-        flexWrap="wrap"
-        justifyContent="center"
-        maxWidth="90%"
-        marginLeft="auto"
-        marginRight="auto"
+        variant="movies"
       >
         {data && data.results.length !== 0 ?
           data.results.map((movie: any) => (
