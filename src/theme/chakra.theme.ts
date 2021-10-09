@@ -13,6 +13,15 @@ const theme = extendTheme({
   components: {
     Container: {
       variants: {
+        "MovieCard": {
+          margin: "1rem",
+          bg: "#2f3257",
+          height: "480px",
+          width: "265px",
+          color: "white",
+          cursor: "pointer",
+          borderRadius: "3px",
+        },
         "headComponents": {
           maxWidth: "100%",
           display: "grid",

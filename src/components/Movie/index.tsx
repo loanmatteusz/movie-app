@@ -38,7 +38,6 @@ function Movie({
       w="265px"
       color="white"
       cursor="pointer"
-
       borderRadius="3px"
     >
       <Image

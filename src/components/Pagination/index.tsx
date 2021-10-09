@@ -30,8 +30,7 @@ function Pagination({
           listStyleType="none"
         >
           {currentPage > 1 ?
-            <ListItem
-              margin="5px"
+            <ListItem margin="5px"
               key={1}
               onClick={() => fetch(search, currentPage - 1)}
             >
