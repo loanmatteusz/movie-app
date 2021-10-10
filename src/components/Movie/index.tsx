@@ -34,16 +34,35 @@ function Movie({
     <Box
       margin="1rem"
       bg="#2f3257"
-      h="480px"
-      w="265px"
+      h={[
+        "220px",
+        "260px",
+        "280px",
+        "460px",
+        "460px"
+      ]}
+      w={[
+        "28%",
+        "28%",
+        "26%",
+        "26%",
+        "22%",
+        "17%",
+        "17%"
+      ]}
       color="white"
       cursor="pointer"
       borderRadius="3px"
     >
       <Image
         borderTopRadius="3px"
-        h="400px"
-        maxW="100%"
+        h={[
+          "160px",
+          "180px",
+          "220px",
+          "380px"
+        ]}
+        w="100%"
         src={
           poster_path
             ? (IMG_API + poster_path)
@@ -56,9 +75,11 @@ function Movie({
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        padding="0 1rem"
+        padding="1rem"
       >
-        <Text>
+        <Text
+          fontSize={["8px", "10px", "12px", "md"]}
+        >
           {title}
         </Text>
         <Badge

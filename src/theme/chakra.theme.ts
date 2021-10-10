@@ -72,7 +72,7 @@ const theme = extendTheme({
   },
   textStyles: {
     h2: {
-      fontSize: ["16px", "28px"],
+      fontSize: ["18px", "28px"],
       fontWeight: "semibold",
       lineHeight: "110%",
       letterSpacing: "-1%",
