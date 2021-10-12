@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from '@chakra-ui/input';
 import useDebounce from '../../util/useDebounce';
-// import './styles.css';
 
 type Props = {
   value: string;
@@ -24,16 +23,17 @@ function SearchInput({ value, onChange }: Props) {
     <Input
       backgroundColor="transparent"
       border="2px solid #3a3c65"
-      borderRadius="5px"
+      borderRadius="25px"
       fontFamily="'Courier New', Courier, monospace"
       fontSize="1.2rem"
       color="white"
       padding=".5rem 1.5rem"
-      width="100%"
+      m="2%"
+      w={["100%", "100%", "75%", "60%", "50%"]}
       outline="none"
 
       type="search"
-      placeholder="Search a movie, serie or person..."
+      placeholder="Pesquise por um filme"
       value={displayValue}
       onChange={handleChange}
     />

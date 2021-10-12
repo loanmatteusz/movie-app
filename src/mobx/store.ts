@@ -11,7 +11,7 @@ interface IMostWanted {
 class Store {
   public data: IData;
   // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-  public page: number = 1;
+  // public page: number = 1;
   // eslint-disable-next-line @typescript-eslint/no-inferrable-types
   public search: string = "";
   public mostWanted: IMostWanted[] = [];
@@ -22,7 +22,7 @@ class Store {
   constructor() {
     makeAutoObservable(this);
     this.fetch();
-    this.searchDisposer = reaction(() => this.search, () => this.fetch(this.search, this.page));
+    this.searchDisposer = reaction(() => this.search, () => this.fetch(this.search));
   }
 
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -43,7 +43,7 @@ class Store {
     return this.mostWanted
       .slice()
       .sort((itemA, itemB) => itemB.quantity - itemA.quantity)
-      .slice(0, 5);
+      .slice(0, 10);
   }
 
   public setData(data: IData) {
@@ -54,18 +54,18 @@ class Store {
     this.search = search;
   }
 
-  public setPage(page: number) {
-    this.page = page;
-  }
+  // public setPage(page: number) {
+  //   this.page = page;
+  // }
 
 
-  public fetch = async (search: string = this.search, page: number = this.page) => {
+  public fetch = async (search: string = this.search) => {
     try {
       this.addMostWanted(search);
       this.setSearch(search);
-      this.setPage(page);
+      // this.setPage(page);
 
-      const data = await api.getData(this.search, this.page);
+      const data = await api.getData(this.search);
       this.setData(data);
     }
     catch (err) {

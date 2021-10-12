@@ -1,20 +1,8 @@
 import React from 'react';
-import { Image, Box, HStack, Text, Badge } from "@chakra-ui/react"
-// import './styles.css';
+import { Image, Box } from "@chakra-ui/react"
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
-function setVoteClass(vote: number) {
-  if (vote >= 8) {
-    return "green";
-  }
-  else if (vote >= 6) {
-    return "purple";
-  }
-  else {
-    return "red";
-  }
-}
 
 type Props = {
   title: string;
@@ -28,40 +16,19 @@ function Movie({
   title,
   poster_path,
   // overview,
-  vote_average
+  // vote_average
 }: Props) {
   return (
     <Box
-      margin="1rem"
-      bg="#2f3257"
-      h={[
-        "220px",
-        "260px",
-        "280px",
-        "460px",
-        "460px"
-      ]}
-      w={[
-        "28%",
-        "28%",
-        "26%",
-        "26%",
-        "22%",
-        "17%",
-        "17%"
-      ]}
-      color="white"
       cursor="pointer"
-      borderRadius="3px"
+      borderRadius="10px"
+      w="100%"
+      h={["140px", "180px", "200px", "240px", "320px"]}
+      bg="#2a2a37"
     >
       <Image
-        borderTopRadius="3px"
-        h={[
-          "160px",
-          "180px",
-          "220px",
-          "380px"
-        ]}
+        borderRadius="10px"
+        h="100%"
         w="100%"
         src={
           poster_path
@@ -70,31 +37,6 @@ function Movie({
         }
         alt={title}
       />
-
-      <HStack
-        display="flex"
-        alignItems="center"
-        justifyContent="space-between"
-        padding="1rem"
-      >
-        <Text
-          fontSize={["8px", "10px", "12px", "md"]}
-        >
-          {title}
-        </Text>
-        <Badge
-          variant="solid"
-          colorScheme={`${setVoteClass(vote_average)}`}
-        >
-          {vote_average}
-        </Badge>
-      </HStack>
-
-      {/* <Container>
-        <h2>Overview:</h2>
-        <p>{overview}</p>
-      </Container> */}
-
     </Box>
   );
 }
