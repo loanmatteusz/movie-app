@@ -7,9 +7,7 @@ import {
   Divider,
   HStack,
   VStack,
-  Flex,
-  Grid,
-  Button
+  Grid
 } from '@chakra-ui/react'
 import { Icon, ChevronRightIcon } from '@chakra-ui/icons';
 
@@ -17,6 +15,8 @@ import SearchInput from '../../components/SearchInput';
 import Movie from '../../components/Movie';
 import Store from '../../mobx/store';
 import NavBar from '../../components/NavBar';
+
+import SearchRanking from '../../components/SearchRanking';
 
 
 function Home() {
@@ -41,21 +41,7 @@ function Home() {
         <Box m={["0 2%", "0 5%", "0 10%", "0 12%", "0 15%"]}>
           <VStack alignItems="center" justifyContent="center">
             <SearchInput value={search} onChange={fetch} />
-
-            <VStack w="100%">
-              <Text>Mais pesquisados</Text>
-              <Flex w={["100","100%","80%","60%","45%"]} h={["160px","140px","80px"]} borderRadius="25px" display="flex" alignItems="center" justifyContent="center" wrap="wrap"> {/* Mais pesquisados */}
-                {
-                  mostWantedOrderned && mostWantedOrderned.length !== 0
-                    ? mostWantedOrderned.map((item: any) => {
-                      return (
-                        <Button key={item.name} m=".3rem .2rem" colorScheme="yellow" variant="outline">{item.name}: {item.quantity}</Button>
-                      )
-                    })
-                    : <Text color="gray">Nenhuma pesquisa iniciada, busque por algum título na barra de pesquisa.</Text>
-                }
-              </Flex>
-            </VStack>
+            <SearchRanking mostWanted={mostWantedOrderned} />
           </VStack>
 
           <Divider m=".5rem 0" borderColor="transparent" />
@@ -84,7 +70,7 @@ function Home() {
               <Icon as={ChevronRightIcon} w={10} h={10} />
             </HStack>
             <Divider m=".5rem 0" borderColor="transparent" />
-            <Grid pb="10%" templateColumns={["repeat(3, 1fr)", "repeat(3, 1fr)", "repeat(4, 1fr)", "repeat(5, 1fr)"]} gap={4}>
+            <Grid pb="10%" templateColumns={{base: "repeat(3, 1fr)", sm: "repeat(4, 1fr)", md: "repeat(4, 1fr)", lg: "repeat(5, 1fr)"}} gap={4}>
               {data && data.results.length !== 0 ?
                 data.results.map((movie: any) => (
                   <Movie

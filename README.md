@@ -19,7 +19,7 @@ Implementar funcionalidade de busca de filmes, com paginação.
 - [x] Componentes não recebem store como props;
 - [x] Todo atomo é um componente do chakra;
 - [.]  Se você estiver passando muita props de estilização, (max 3), voce tem que criar um componente novo;
-- [.]  Breakpoints só podem ser usados como objeto.
+- [x]  Breakpoints só podem ser usados como objeto.
 
 ---
 

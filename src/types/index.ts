@@ -20,3 +20,8 @@ export interface IMovie {
   video: boolean;
   vote_average: number;
 }
+
+export interface IMostWanted {
+  name: string;
+  quantity: number;
+}

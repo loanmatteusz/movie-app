@@ -1,12 +1,8 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { IReactionDisposer, makeAutoObservable, reaction, runInAction } from 'mobx';
-import { IData } from '../types';
+import { IData, IMostWanted } from '../types';
 import api from './API';
 
-interface IMostWanted {
-  name: string;
-  quantity: number;
-}
 
 class Store {
   public data: IData;

@@ -38,15 +38,6 @@ function NavBar() {
               <Link href="#">Lançamentos</Link>
             </ListItem>
           </UnorderedList>
-          {/* <Box bg="#252537" height="80px">
-          </Box>
-          <Box bg="#252537" height="80px" display="flex" alignItems="center" justifyContent="flex-end">
-            <Select placeholder="Worldwide" w="130px">
-              <option value="brasil">Brasil</option>
-              <option value="eua">EUA</option>
-            </Select>
-            <Button ml="100px" colorScheme="#1c1c28" variant="outline">Login</Button>
-          </Box> */}
       </Box>
   );
 }
