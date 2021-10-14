@@ -26,11 +26,13 @@ const theme = extendTheme({
           display: "grid",
           alignItems: "center",
           justifyContent: {
+            base: "space-between",
             sm: "space-between",
             md: "space-between",
             lg: "space-between"
           },
           gridTemplateColumns: {
+            base: "repeat(3, 1fr)",
             sm: "repeat(3, 1fr)",
             md: "repeat(2, 1fr)",
             lg: "repeat(2, 1fr)"
@@ -38,7 +40,7 @@ const theme = extendTheme({
         },
         list: {
           display: {
-            base: "flex",
+            base: "none",
             sm: "none",
             md: "flex",
             lg: "flex",
