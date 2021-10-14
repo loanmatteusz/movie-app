@@ -23,7 +23,7 @@ function NavBar() {
         </Container>
 
         <Container w="180px" display="flex" alignItems="center" justifyContent="center">
-          <Text fontSize="3xl" color="white">Movie App</Text>
+          <Text fontSize="3xl" color="orange">Movie App</Text>
         </Container>
 
         <Container variant="list" w="360px" color="white">
