@@ -47,9 +47,9 @@ function Home() {
           <Divider m=".5rem 0" borderColor="transparent" />
 
           <Box w="100%" m="0 auto">
-            <Text fontSize="3xl">Assistir a filmes online</Text>
+            <Text fontSize={["lg", "xl", "2xl", "3xl"]}>Assistir a filmes online</Text>
             <Divider mb=".5rem" borderColor="orange" />
-            <Text fontSize={["sm", "sm", "md", "md", "lg"]}>
+            <Text fontSize={["base", "sm", "md", "lg"]}>
               Encontre seu próximo filme para assistir online e veja em quais plataformas ele está disponível.
               <br />
               Sabemos do seu desafio em encontrar um filme online dublado ou legendado entre as mais diversas plataformas de streaming, como Netflix, YouTube, Amazon Prime Video, NOW, Apple TV e outras.

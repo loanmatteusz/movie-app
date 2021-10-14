@@ -15,11 +15,11 @@ Implementar funcionalidade de busca de filmes, com paginação.
 
 ### Desafio de integração com Mobx
 - [x] App somente para configuração;
-- [x]  Store local somente vão ser iniciadas nos componentes tela;
+- [x] Store local somente vão ser iniciadas nos componentes tela;
 - [x] Componentes não recebem store como props;
 - [x] Todo atomo é um componente do chakra;
-- [.]  Se você estiver passando muita props de estilização, (max 3), voce tem que criar um componente novo;
-- [x]  Breakpoints só podem ser usados como objeto.
+- [.] Se você estiver passando muita props de estilização, (max 3), voce tem que criar um componente novo;
+- [x] Breakpoints só podem ser usados como objeto.
 
 ---
 
