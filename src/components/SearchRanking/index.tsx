@@ -10,7 +10,7 @@ interface Props {
 
 const SearchRanking = ({ mostWanted }: Props) => {
   return (
-    <VStack mt="5px" w="100%">
+    <VStack w="100%">
       <Text>Mais pesquisados</Text>
       <Flex w={{ base: "100", sm: "100%", md: "80%", lg: "60%", xl: "45%" }} h={["160px", "140px", "80px"]} borderRadius="25px" display="flex" alignItems="center" justifyContent="center" wrap="wrap"> {/* Mais pesquisados */}
         {
