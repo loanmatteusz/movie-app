@@ -24,7 +24,7 @@ const ReadMore: React.FC = () => {
         <br />
         <br />
         Sabemos do seu desafio em encontrar um filme online dublado ou legendado entre as mais diversas plataformas de streaming, como Netflix, YouTube, Amazon Prime Video, NOW, Apple TV e outras.
-        <Container m="0 auto" textAlign="center">
+        <Container m="-10px auto" textAlign="center">
           <Button onClick={() => handleTextCompact()} variant="unstyled">...</Button>
         </Container>
       </Text>

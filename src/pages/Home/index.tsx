@@ -40,7 +40,7 @@ function Home() {
 
       <Box m="0 auto" bgColor="#1c1c28" color="white">
         <Box m={["0 2%", "0 5%", "0 10%", "0 12%", "0 15%"]}>
-          <VStack alignItems="center" justifyContent="center">
+          <VStack mt="5px" alignItems="center" justifyContent="center">
             <SearchInput value={search} onChange={fetch} />
             <SearchRanking mostWanted={mostWantedOrderned} />
           </VStack>
