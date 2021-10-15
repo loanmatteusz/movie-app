@@ -22,7 +22,7 @@ function NavBar() {
           <Box m="8px" w="32px" h="2px" bgColor="#fff"></Box>
         </Container>
 
-        <Container w="180px" display="flex" alignItems="center" justifyContent="center">
+        <Container w="180px" variant="titleResponsive" display="flex" alignItems="center" justifyContent="center">
           <Text fontSize="3xl" color="orange">Movie App</Text>
         </Container>
 

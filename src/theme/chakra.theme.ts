@@ -47,9 +47,22 @@ const theme = extendTheme({
           },
           alignItems: "center",
           justifyContent: "center",
+        },
+        titleResponsive: {
+          mr: {
+            md: "45%",
+            lg: "50%",
+          },
         }
       },
     },
+    Text: {
+      variants: {
+        compacted: {
+          backgroundImage: "linear-gradient(rgba(28,28,40,0), #1c1c28)",
+        }
+      }
+    }
   },
 });
 

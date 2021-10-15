@@ -17,6 +17,7 @@ import Store from '../../mobx/store';
 import NavBar from '../../components/NavBar';
 
 import SearchRanking from '../../components/SearchRanking';
+import ReadMore from '../../components/ReadMore';
 
 
 function Home() {
@@ -46,21 +47,7 @@ function Home() {
 
           <Divider m=".5rem 0" borderColor="transparent" />
 
-          <Box w="100%" m="0 auto">
-            <Text fontSize={["lg", "xl", "2xl", "3xl"]}>Assistir a filmes online</Text>
-            <Divider mb=".5rem" borderColor="orange" />
-            <Text fontSize={["base", "sm", "md", "lg"]}>
-              Encontre seu próximo filme para assistir online e veja em quais plataformas ele está disponível.
-              <br />
-              Sabemos do seu desafio em encontrar um filme online dublado ou legendado entre as mais diversas plataformas de streaming, como Netflix, YouTube, Amazon Prime Video, NOW, Apple TV e outras.
-              <br />
-              No Filmelier nossa missão é te ajudar a encontrar os melhores filmes em alta qualidade (HD) para você assistir online, no conforto da sua casa e em qual serviço de streaming preferir.
-              <br />
-              São diversos lançamentos e filmes antigos de gêneros como drama, terror, ação, comédia, suspense e muito mais.
-              <br />
-              Continue navegando e descubra seu próximo filme para ver online hoje.
-            </Text>
-          </Box>
+          <ReadMore />
 
           <Divider m="1rem 0" borderColor="transparent" />
 
