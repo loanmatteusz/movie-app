@@ -17,9 +17,9 @@ const ReadMore: React.FC = () => {
 
   return (
     <Box w="100%" m="0 auto">
-      <Text fontSize={["lg", "xl", "2xl", "3xl"]}>Assistir a filmes online</Text>
+      <Text fontSize={["2xl", "2xl", "3xl", "3xl", "3xl"]}>Assistir a filmes online</Text>
       <Divider mb=".5rem" borderColor="orange" />
-      <Text display={textCompact.textCompacted} fontSize={["base", "sm", "md", "lg"]} variant="compacted">
+      <Text display={textCompact.textCompacted} fontSize={["12px", "12px", "sm", "md", "md"]} variant="compacted">
         Encontre seu próximo filme para assistir online e veja em quais plataformas ele está disponível.
         <br />
         <br />
@@ -28,7 +28,7 @@ const ReadMore: React.FC = () => {
           <Button onClick={() => handleTextCompact()} variant="unstyled">...</Button>
         </Container>
       </Text>
-      <Text display={textCompact.textExpanded} fontSize={["base", "sm", "md", "lg"]}>
+      <Text display={textCompact.textExpanded} fontSize={["12px", "12px", "sm", "md", "md"]}>
         Encontre seu próximo filme para assistir online e veja em quais plataformas ele está disponível.
         <br />
         <br />
