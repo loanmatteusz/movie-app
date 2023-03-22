@@ -23,7 +23,7 @@ function Movie({
       cursor="pointer"
       borderRadius="10px"
       w="100%"
-      h={{ base: "140px", sm: "160px", md: "200px", lg: "240px", xl: "320px" }}
+      h={{ base: "140px", sm: "160px", md: "200px", lg: "240px", xl: "380px" }}
       bg="#2a2a37"
     >
       <Image
